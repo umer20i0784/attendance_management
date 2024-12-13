@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Clock In/Out</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container position-relative mt-5">
+        <button id="admin-btn" class="btn btn-secondary position-absolute top-0 end-0 m-3 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#adminModal">
+            <i class="bi bi-lock fs-4"></i> 
+            <span class="ms-2 d-none d-sm-inline">Admin Actions</span>
+        </button>
+    
+        <div class="text-center">
+            <img src="logo.png" alt="Organization Logo" class="logo mb-4">
+            <h1>Employee Clock In/Out</h1>
+            <p id="current-time" class="time-display mt-3"></p>
+            <p id="current-ip" class="ip-display"></p>
+    
+            <div class="mt-4">
+                <button id="clock-in-btn" class="btn btn-success btn-lg me-3" data-bs-toggle="modal" data-bs-target="#clockModal" data-action="Clock In">Clock In</button>
+                <button id="clock-out-btn" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#clockModal" data-action="Clock Out">Clock Out</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Clock Modal -->
+    <div class="modal fade" id="clockModal" tabindex="-1" aria-labelledby="clockModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="clockModalLabel">Enter Secret Key</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="password" id="secret-key" class="form-control mb-3" placeholder="Enter your secret key">
+                    <button id="confirm-btn" class="btn btn-primary w-100">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adminModalLabel">Admin Actions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="password" id="admin-password" class="form-control mb-3" placeholder="Enter Admin Password">
+                    <button id="generate-report-btn" class="btn btn-secondary w-100">Generate Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

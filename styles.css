@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    width: 150px;
+}
+
+h1 {
+    font-weight: bold;
+    color: #333;
+}
+
+.time-display {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.ip-display {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #333;
+}
+
+#secret-key {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#confirm-btn {
+    background-color: #007bff;
+    border: none;
+    font-size: 1.2rem;
+}
+
+#confirm-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Center the main content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Make the container fill the viewport height */
+    text-align: center;
+}
+
+/* Ensure Admin button stays on the top-right */
+#admin-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Ensure logo scales well */
+.logo {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Adjust button position for small screens */
+@media (max-width: 768px) {
+    #admin-btn {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    #admin-btn .d-sm-inline {
+        display: none; /* Hide text on small screens */
+    }
+
+    .container {
+        height: 100vh; 
+    }
+}
