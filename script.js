@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     const adminPassword = "1";
     
     const employees = {
-        "1": "Elisabeth Salas",
-        "2": "Candy Ramirez",
-        "3": "Leslie Mejia",
+        "elisabeth": "Elisabeth Salas",
+        "candy": "Candy Ramirez",
+        "leslie": "Leslie Mejia",
     };
 
     const apiKey = "2258afe784f342a1aa158d830867dd36"; //  API Key for ipgeolocation.io
