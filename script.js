@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
-    const adminPassword = "admin";
+    const adminPassword = "admin1";
     
     const employees = {
         "elisabeth": "Elisabeth Salas",
