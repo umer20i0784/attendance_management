@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         "elisabeth": "Elisabeth Salas",
         "candy": "Candy Ramirez",
         "leslie": "Leslie Mejia",
+        "Mc": "Maricarmen",
     };
 
     const apiKey = "2258afe784f342a1aa158d830867dd36"; //  API Key for ipgeolocation.io
